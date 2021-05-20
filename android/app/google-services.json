@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "13614087584",
+    "project_id": "covidinsight-af798",
+    "storage_bucket": "covidinsight-af798.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13614087584:android:f54e345a65608d9a95f8c5",
+        "android_client_info": {
+          "package_name": "com.example.covid_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13614087584-guledpfgfcup73r9619o6g193vp902gm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUd3YqvVmAD12kosDvUu9kBAG41RFbEKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13614087584-guledpfgfcup73r9619o6g193vp902gm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
