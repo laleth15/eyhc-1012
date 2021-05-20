@@ -55,18 +55,20 @@ class _HomePageState extends State<HomePage> {
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
-              DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border(
-                    bottom: BorderSide(width: 1.0, color: Colors.amber),
+              Container(
+                height: 150.0,
+                child: DrawerHeader(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border(
+                      bottom: BorderSide(width: 2.0, color: Colors.amber),
+                    ),
                   ),
+                  child: Center(
+                      child: Image(
+                        image: AssetImage("assets/images/appdrawer.png"),
+                      )),
                 ),
-                child: Center(
-                    child: Text(
-                  "Menu bar",
-                  style: TextStyle(fontSize: 25.0),
-                )),
               ),
               ListTile(
                 title: Text('Get Help'),
