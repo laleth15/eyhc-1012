@@ -1,3 +1,6 @@
+import 'package:covid_project/DonateForm.dart';
+import 'package:covid_project/GetHelp.dart';
+import 'package:covid_project/coronaStatus.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'form.dart';
@@ -12,6 +15,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        routes: <String, WidgetBuilder> {
+          "/GetHelp" : (BuildContext context) => new GetHelp(),
+          "/DonateForm" : (BuildContext context) => new DonateForm(),
+          "/CoronaStatus":(BuildContext context) => new CoronaStatus(),
+        },
       title: "CovidInsight",
       theme: ThemeData(
         brightness: Brightness.light,
@@ -73,28 +81,19 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 title: Text('Get Help'),
                 onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
+                  Navigator.popAndPushNamed(context,"/GetHelp",);
                 },
               ),
               ListTile(
-                title: Text('Volunteer'),
+                title: Text('Donate Resources'),
                 onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
+                  Navigator.popAndPushNamed(context,"/DonateForm",);
                 },
               ),
               ListTile(
                 title: Text('Corona Status'),
                 onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
+                  Navigator.popAndPushNamed(context,"/CoronaStatus",);
                 },
               ),
               ListTile(
