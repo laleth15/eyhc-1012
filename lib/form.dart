@@ -1,17 +1,24 @@
+import 'package:covid_project/main.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class CustomForm extends StatefulWidget {
-  const CustomForm({Key key}) : super(key: key);
-
+  CustomForm({this.app});
+  final FirebaseApp app;
   @override
   _CustomFormState createState() => _CustomFormState();
 }
 
 class _CustomFormState extends State<CustomForm> {
   String _name,_number,_description,_state,_city;
+  final referenceDatabase = FirebaseDatabase.instance;
   final _formKey = GlobalKey<FormState>();
+  DatabaseReference _detailsRef;
+
   @override
   Widget build(BuildContext context) {
+    final ref = referenceDatabase.reference();
     return SafeArea(
         child: Scaffold(
           appBar: AppBar(title: Text("CovidInsight"),centerTitle: true),
@@ -213,7 +220,21 @@ class _CustomFormState extends State<CustomForm> {
                           // Validate returns true if the form is valid, or false
                           // otherwise.
                           if (_formKey.currentState.validate()) {
-                            Navigator.pop(context);
+                            ref
+                            .child("Details")
+                            .push()
+                            .set({
+                              'Name':_name,
+                              "Number" : _number,
+                              "City" : _city,
+                              "State" : _state,
+                              "Description" : _description,
+                              "CreatedOn": ServerValue.timestamp,
+                            })
+                            .asStream();
+                            Navigator.pop(context,MaterialPageRoute(
+                              builder: (_) => HomePage(name: _name,detailsRef: _detailsRef,app: widget.app,
+                              ),),);
                           }
                         },
                         child: Center(
