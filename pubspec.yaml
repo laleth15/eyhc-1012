@@ -21,12 +21,13 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  flutter_phone_direct_caller: ^1.0.1
-  url_launcher: ^5.4.0
+
   flutter:
     sdk: flutter
   firebase_database: ^6.0.0
   firebase_core: "^0.7.0"
+  font_awesome_flutter: ^9.0.0
+  http: ^0.13.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
