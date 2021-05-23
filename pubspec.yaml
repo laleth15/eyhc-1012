@@ -1,5 +1,6 @@
 name: covid_project
-description: A flutter app for covid-19 support which can be used for keep track of covid and also as a data accumulator to get the demand for resources in region, which can be used for supply demand gap assesment
+description: A flutter app for covid-19 support which can be used for keep track of covid and also as a data accumulator 
+to get the demand for resources in region, which can be used for supply demand gap assesment
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
