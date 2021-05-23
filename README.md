@@ -1,6 +1,7 @@
 # covid_project
 
-A new Flutter application.
+A flutter app for covid-19 support which can be used for keep track of covid and also as a data
+accumulator to get the demand for resources in region, which can be used for supply demand gap assessment.
 
 ## Getting Started
 
@@ -14,3 +15,4 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
